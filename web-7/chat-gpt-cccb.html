@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maqueta Página Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .top-banner {
+            position: relative;
+            width: 100%;
+            margin-bottom: 20px;
+            background-color: #2F4F4F;
+            height: 300px;
+        }
+
+        .text-overlay {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+        }
+
+        .text-overlay h2 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        .text-overlay p {
+            margin: 5px 0;
+        }
+
+        .text-overlay .date {
+            font-size: 1em;
+        }
+
+        .bottom-section {
+            display: flex;
+            gap: 20px;
+        }
+
+        .card {
+            position: relative;
+            flex: 1;
+            background-color: #696969;
+            height: 200px;
+        }
+
+        .card .text-overlay {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+        }
+
+        .card .text-overlay h2 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        .card .text-overlay p {
+            margin: 5px 0;
+        }
+
+        .card .text-overlay .date {
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top-banner">
+            <div class="text-overlay">
+                <h2>Suburbia</h2>
+                <p>La construcción del sueño americano</p>
+                <p class="date">Hasta el 8 de septiembre</p>
+            </div>
+        </div>
+        <div class="bottom-section">
+            <div class="card">
+                <div class="text-overlay">
+                    <h2>Espai B</h2>
+                    <p>Un espacio artístico de encuentro y experimentación</p>
+                    <p class="date">Hasta el 8 de septiembre</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="text-overlay">
+                    <h2>Món Llibre 2024</h2>
+                    <p>Festival literario para niñas y niños</p>
+                    <p class="date">15 - 16 junio</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

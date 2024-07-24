@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My News Web - Contact</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+
+<body class="contact">
+
+<header>
+	<h1 class="web-title"><a href="index.html">My News Web</a></h1>
+	<nav class="main-nav" id="main-menu">
+		<ul>
+			<li><a href="index.html">Inicio</a></li>
+			<li><a href="noticia-1.html">Noticias</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="contact.html" class="selected">Contactar</a></li>
+		</ul>
+	</nav>
+	<div id="responsive-menu"><i class="fa-solid fa-bars"></i></div>
+</header>
+
+<main class="main-wrapper">
+	 <h1 section-title>Contactar</h1>
+
+	 <div class="contact-wrapper">
+		 <form action="enviar.php" method="post"> <div class="campo">
+	            <label for="nombre">Nombre:</label>
+	            <input type="text" id="nombre" name="nombre" required placeholder="Escribir el bombre ...">
+	        </div>
+
+	        <div class="campo">
+	            <label for="apellidos">Apellidos:</label>
+	            <input type="text" id="apellidos" name="apellidos" required>
+	        </div>
+
+	        <div class="campo">
+	            <label for="email">Correo electrónico:</label>
+	            <input type="email" id="email" name="email" required>
+	        </div>
+
+	        <div class="campo">
+	            <label for="departamento">Departamento:</label>
+	            <select id="departamento" name="departamento" required>
+	                <option value="">Seleccionar departamento</option>
+	                <option value="redaccion">Redacción</option>
+	                <option value="publicidad">Publicidad</option>
+	                <option value="suscripciones">Suscripciones</option>
+	                <option value="otro">Otro</option>
+	            </select>
+	        </div>
+
+	        <div class="campo eres-cliente">
+	            <label for="cliente">¿Es usted cliente?</label>
+	            <input type="radio" id="cliente_si" name="cliente" value="si">
+	            <label for="cliente_si">Sí</label>
+	            <input type="radio" id="cliente_no" name="cliente" value="no" checked>
+	            <label for="cliente_no">No</label>
+	        </div>
+
+	        <div class="campo">
+			    <label for="comentarios">Comentarios:</label>
+			    <textarea id="comentarios" name="comentarios" rows="5" required></textarea>
+			</div>
+
+			<div class="campo condiciones-legales">
+	            <input type="checkbox" id="privacidad" name="privacidad" required>
+	            <label for="privacidad">Acepto las <a href="#" target="_blank">condiciones de privacidad</a></label>
+	        </div>
+
+	        <button type="submit" class="form-button">Enviar formulario</button>
+	    </form>
+
+	    <div class="contact-info">
+	    	<h2>Dirección</h2>
+	    	<p>Horarios</p>
+	    	<p>Redes</p>
+	    	<p>Tel. +34 555 666 888</p>
+			<p><a href="mailto:email@mail.com">email@mail.com</a></p>
+	    </div>
+	</div>
+
+</main>
+
+<div class="map" id="map">
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.8956964209815!2d2.14850017505912!3d41.39807147129854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2a1ce28c5e1%3A0xe02482f329962e5!2sLCI%20Barcelona!5e0!3m2!1sca!2ses!4v1718810571830!5m2!1sca!2ses" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+<footer id="footer">
+	<div><p>© 2024 - Mi web</p></div>
+	<div>
+		<a href="contact.html">Contactar</a>
+		<a href="#">Nota legal</a>
+		<a href="#">Cookies</a>
+	</div>
+</footer>
+
+<script type="text/javascript" src="scripts.js"></script>
+
+</body>
+</html>

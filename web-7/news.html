@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>HTML semántico</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,400&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+	
+	<style type="text/css">
+
+		* {
+			box-sizing: border-box;
+		}
+
+		:root {
+			--ancho-maximo: 900px;
+			--ancho-columnas: 280px;
+			--text-color: #222222;
+			--link-color: red;
+			--bg-color: grey;
+			--main-font: "Roboto Serif", serif;
+			--h-font:"Poppins", sans-seri;
+		}
+
+		/* Estilos genéricos */
+		body {
+			font-family: var(--main-font);
+			font-size: 16px;
+			margin: 0;
+			padding: 0;
+			color: var(--text-color);
+		}
+		h1, h2, h3, h4, h5, h6, p {
+			margin-top: 0;
+		}
+		h1,h2,h3,h4,h5,h6 {
+			font-family: var(--h-font);
+		}
+		img {
+			max-width: 100%;
+			height: auto;
+			display: block;
+		}
+		header, footer {
+			min-height: 120px;
+			background-color: lightcoral;
+		}
+		header {
+			display: flex;
+			flex-wrap: wrap;
+		    justify-content: space-between;
+		    align-items: center;
+		    padding: 0 20px;
+		    position: sticky;
+		    top: 0;
+		    background-color: rgba(100,100,100,0.8);
+		}
+		header h1 {
+			flex: 1 150px;
+		}
+		header nav {
+			flex: 3 300px;
+		}
+		header h1 {
+			margin-bottom: 0;
+		}
+
+		/* Menu */
+		nav ul {
+			padding: 0;
+		    margin: 0;
+		    list-style: none;
+		    display: flex;
+		    justify-content: flex-end;
+		}
+		nav ul a {
+		    display: block;
+		    padding: 0 15px;
+		    color: var(--text-color);
+		    text-decoration: none;
+		    font-family: var(--h-font);
+		}
+
+		.main-wrapper {
+			max-width: var(--ancho-maximo);
+			/*margin-left: auto;
+			margin-right: auto;*/
+			margin: 0 auto 40px;
+		}
+
+		/* News */
+
+		.inner-wrapper {
+			display: flex;
+			gap: 20px;
+			flex-wrap: wrap;
+		}
+
+		.inner-wrapper article {
+			flex: 1 var(--ancho-columnas);
+		}
+
+		.news-wrapper article {
+			background-color: lightblue;
+			padding: 20px;
+		}
+		.news-wrapper article:hover{
+			box-shadow: 10px 10px 20px gray;
+		}
+		.news-wrapper article:first-child {
+			background-color: lightcoral;
+		}
+		.news-wrapper article h3 {
+			text-transform: uppercase;
+		}
+
+		.author {
+			font-style: italic;
+		}
+		.button {
+			text-decoration: none;
+			color: white;
+			background-color: black;
+			padding: 10px 30px;
+			border-radius: 8px;
+			/*border: 1px solid white;*/
+			transition: all 0.5s;
+		}
+		.button:hover {
+			background-color: red;
+			color: black;
+			margin-left: 3px;
+		}
+
+
+
+	</style>
+
+</head>
+
+<body>
+
+<header>
+	<h1>Mi web</h1>
+	<nav>
+		<ul>
+			<li><a href="#">Inicio</a></li>
+			<li><a href="#">Noticias</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Contactar</a></li>
+		</ul>
+	</nav>
+</header>
+
+<main class="main-wrapper">
+	
+	<section class="news-wrapper">
+
+		<h2>Last News</h2>
+		
+		<div class="inner-wrapper">
+			<article>
+
+				<div class="featured-image">
+					<img src="imagenes/95-800x400.jpg">
+				</div>
+
+				<h3>noticia 1</h3>
+				
+				<p class="article-meta">
+					<span class="date">17 junio</span> - 
+					<span class="author">Enrique Simth</span>
+				</p>
+				
+				<div class="article-content">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas finibus elit at quam suscipit, in accumsan diam efficitur. Aenean et justo sollicitudin, accumsan dolor sit amet, pellentesque ligula. </p>
+					<a href="" class="button see-more">Ver más</a>
+				</div>
+
+			</article>
+
+			
+			<article>
+
+				<div class="featured-image">
+					<img src="imagenes/161-800x400.jpg">
+				</div>
+
+				<h3>noticia 1</h3>
+				
+				<p class="article-meta">
+					<span class="date">17 junio</span> - 
+					<span class="author">Enrique Simth</span>
+				</p>
+				
+				<div class="article-content">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas finibus elit at quam suscipit, in accumsan diam efficitur. Aenean et justo sollicitudin, accumsan dolor sit amet, pellentesque ligula. </p>
+					<a href="" class="button see-more">Ver más</a>
+				</div>
+
+			</article>
+
+			<article>
+
+				<div class="featured-image">
+					<img src="imagenes/348-800x400.jpg">
+				</div>
+
+				<h3>noticia 1</h3>
+				
+				<p class="article-meta">
+					<span class="date">17 junio</span> - 
+					<span class="author">Enrique Simth</span>
+				</p>
+				
+				<div class="article-content">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas finibus elit at quam suscipit, in accumsan diam efficitur. Aenean et justo sollicitudin, accumsan dolor sit amet, pellentesque ligula. </p>
+					<a href="" class="button see-more">Ver más</a>
+				</div>
+
+			</article>
+
+			<article>
+
+				<div class="featured-image">
+					<img src="imagenes/943-800x400.jpg">
+				</div>
+
+				<h3>noticia 1</h3>
+				
+				<p class="article-meta">
+					<span class="date">17 junio</span> - 
+					<span class="author">Enrique Simth</span>
+				</p>
+				
+				<div class="article-content">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas finibus elit at quam suscipit, in accumsan diam efficitur. Aenean et justo sollicitudin, accumsan dolor sit amet, pellentesque ligula. </p>
+					<a href="" class="button see-more">Ver más</a>
+				</div>
+
+			</article>
+
+			<article>
+
+				<div class="featured-image">
+					<img src="imagenes/964-800x400.jpg">
+				</div>
+
+				<h3>noticia 1</h3>
+				
+				<p class="article-meta">
+					<span class="date">17 junio</span> - 
+					<span class="author">Enrique Simth</span>
+				</p>
+				
+				<div class="article-content">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas finibus elit at quam suscipit, in accumsan diam efficitur. Aenean et justo sollicitudin, accumsan dolor sit amet, pellentesque ligula. </p>
+					<a href="" class="button see-more">Ver más</a>
+				</div>
+
+			</article>
+
+		</div>
+
+	</section>
+
+</main>
+
+<footer>
+	
+	<p>© 2024 - Mi web</p>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My News Web</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+	
+	<style type="text/css">
+
+		/* variables */
+
+		:root {
+			--max-width:  900px;
+			--article-min-width:  285px; /* aprox = (ancho máximo - gap x 2) / 3 */
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		/* Estilos genéricos */
+		body {
+			font-size: 18px;
+			margin: 0;
+			padding: 0;
+			ont-family: "Roboto Serif", serif;
+  			font-weight: 400;
+  			font-style: normal;
+  			line-height: 1.4;
+		}
+		h1, h2, h3, h4, h5, h6 {
+			font-family: "Poppins", sans-serif;
+			margin-top: 0;
+		}
+		p {
+			margin-top: 0;
+		}
+		img {
+			max-width: 100%;
+			height: auto;
+			display: block;
+		}
+		header, footer {
+			height: 120px;
+			padding: 0 20px;
+		}
+		header {
+			display: flex;
+			align-items: center;
+    		margin-bottom: 40px;
+    		flex-wrap: wrap;
+    		position: sticky;
+    		top: 0;
+    		background-color: rgba(191,255,142,0.85);
+		}
+		header h1 {
+			margin: 0;
+			flex: 1 150px;
+		}
+		header nav {
+			flex: 3 400px;
+		}
+		footer {
+			font-family: "Poppins", sans-serif;
+			padding: 40px 20px;
+			background-color: black;
+			color: white;
+		}
+		footer a {
+			color: inherit;
+		}
+
+		/* Main menú */
+
+		.main-nav ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: flex-end;
+		}
+		.main-nav a {
+			font-family: "Poppins", sans-serif;
+			display: block;
+			padding: 0 20px;
+			color: black;
+			text-decoration: none;
+		}
+		.main-nav a:hover {
+			color: gray;
+		}
+
+		.main-nav a.selected {
+			color: red;
+		}
+
+		.main-wrapper {
+			max-width: var(--max-width);
+			/*margin-left: auto;
+			margin-right: auto;*/
+			margin: 0 auto 40px;
+		}
+
+		/* News */
+
+		.section-title {
+			font-size: 40px;
+			font-weight: normal;
+			text-align: center;
+		}
+
+		.news-wrapper article {
+			/*background-color: lightblue;*/
+			/*padding: 20px;*/
+		}
+		.news-wrapper article:hover{
+			box-shadow: 10px 10px 20px gray;
+		}
+		.news-wrapper article:first-child {
+			/*background-color: lightcoral;*/
+		}
+		.news-wrapper article h3 {
+			text-transform: uppercase;
+			font-weight: normal;
+			margin: 5px 0 15px;
+			font-weight: normal;
+			text-align: center;
+			padding-bottom: 15px;
+			border-bottom: 1px solid grey;
+		}
+
+		.inner-wrapper {
+			display: flex;
+			gap: 20px;
+			flex-wrap: wrap;
+		}
+
+		.inner-wrapper article {
+			flex: 1 var(--article-min-width);
+		}
+		.author {
+			font-style: italic;
+		}
+		.button {
+			font-family: "Poppins", sans-serif;
+			text-decoration: none;
+			color: white;
+			background-color: black;
+			padding: 10px 30px;
+			border-radius: 8px;
+			/*border: 1px solid white;*/
+			/*transition: all 0.5s;*/
+			display: block;
+		    width: fit-content;
+		    margin: 0 auto;
+		}
+		.button:hover {
+			background-color: red;
+			color: black;
+		}
+
+		/* página de noticia */
+		.main-image{
+			position: relative;
+			margin-bottom: 40px;
+		}
+		.main-image h2 {
+			position: absolute;
+			left: 40px;
+			bottom: 40px;
+			padding: 40px;
+			background-color: rgba(255,255,255,0.8);
+		}
+		.main-image img{
+			object-fit: cover;
+			width: 100%;
+			height: 500px;
+		}
+		.news header {
+			z-index: 1;
+			margin-bottom: 0;
+		}
+
+	</style>
+
+</head>
+
+<body class="news">
+
+<header>
+	<h1 class="web-title">Mi web</h1>
+	<nav class="main-nav">
+		<ul>
+			<li><a href="index.html">Inicio</a></li>
+			<li><a href="#" class="selected">Noticias</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Contactar</a></li>
+		</ul>
+	</nav>
+</header>
+
+<div class="main-image">
+	<img src="imagenes/95-800x400.jpg">
+	<h2>Árboles Milenarios Descubiertos en la Amazonía</h2>
+</div>
+
+<main class="main-wrapper">
+
+	<article>
+		
+		<p class="article-meta">
+			<span class="date">17 junio</span> - 
+			<span class="author">Enrique Simth</span>
+		</p>
+		
+		<div class="article-content">
+			<p>Un equipo de científicos ha descubierto varios árboles milenarios en la selva amazónica. Estos árboles, algunos con más de 1,000 años de antigüedad, representan un importante hallazgo para el estudio de los ecosistemas tropicales y su historia. Los investigadores están trabajando para preservar estos gigantes verdes y estudiar su impacto en el clima global.</p>
+			<p>Un equipo de científicos ha descubierto varios árboles milenarios en la selva amazónica. Estos árboles, algunos con más de 1,000 años de antigüedad, representan un importante hallazgo para el estudio de los ecosistemas tropicales y su historia. Los investigadores están trabajando para preservar estos gigantes verdes y estudiar su impacto en el clima global.</p>
+			<p>Un equipo de científicos ha descubierto varios árboles milenarios en la selva amazónica. Estos árboles, algunos con más de 1,000 años de antigüedad, representan un importante hallazgo para el estudio de los ecosistemas tropicales y su historia. Los investigadores están trabajando para preservar estos gigantes verdes y estudiar su impacto en el clima global.</p>
+			<p>Un equipo de científicos ha descubierto varios árboles milenarios en la selva amazónica. Estos árboles, algunos con más de 1,000 años de antigüedad, representan un importante hallazgo para el estudio de los ecosistemas tropicales y su historia. Los investigadores están trabajando para preservar estos gigantes verdes y estudiar su impacto en el clima global.</p>
+		</div>
+
+	</article>
+
+</main>
+
+<footer>
+	
+	<p>© 2024 - Mi web</p>
+
+</footer>
+
+</body>
+</html>
